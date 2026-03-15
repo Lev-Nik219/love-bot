@@ -244,6 +244,9 @@ async def send_love(message: types.Message):
 
 # --- Запуск бота ---
 async def main():
+    start_flask()
+    # Даём Flask время на запуск
+    await asyncio.sleep(2)
     print("🤖 Романтический бот запущен... (каждое 7-е нажатие — стихи)")
     await dp.start_polling(bot)
 
